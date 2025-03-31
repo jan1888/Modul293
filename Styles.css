@@ -1,9 +1,9 @@
 /* CSS-Variablen */
 :root {
-  --primary-color: #3498db;
-  --secondary-color: #2ecc71;
+  --primary-color: #00674b;
+  --secondary-color: #008080;
   --font-color: #333;
-  --background-color: #f4f4f4;
+  --background-color: #d0f0c0;
   --header-font-size: 2rem;
 }
 
