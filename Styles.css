@@ -1,9 +1,9 @@
 /* CSS-Variablen */
 :root {
-  --primary-color: #00674b;
-  --secondary-color: #008080;
+  --primary-color: #404e4d;
+  --secondary-color: #9caea9;
   --font-color: #333;
-  --background-color: #d0f0c0;
+  --background-color: #ccdad1;
   --header-font-size: 2rem;
 }
 
@@ -108,4 +108,7 @@ footer {
   width: 100%;
   object-fit: cover;
   overflow: hidden;
+}
+h1 {
+  color: var(--background-color);
 }
