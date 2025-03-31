@@ -1,0 +1,151 @@
+/* CSS-Variablen */
+:root {
+  --primary-color: #3498db;
+  --secondary-color: #2ecc71;
+  --font-color: #333;
+  --background-color: #f4f4f4;
+  --header-font-size: 2rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@media (min-width: 801px) {
+  body {
+    font-family: Arial, sans-serif;
+    color: var(--font-color);
+    background-color: var(--background-color);
+    line-height: 1.6;
+    display: grid;
+    grid-template-columns: 300px auto auto;
+    grid-template-areas:
+      "header header header"
+      "nav main main"
+      "footer footer footer";
+  }
+  nav ul {
+    height: 100%;
+  }
+}
+@media (max-width: 800px) {
+  body {
+    font-family: Arial, sans-serif;
+    color: var(--font-color);
+    background-color: var(--background-color);
+    line-height: 1.6;
+    display: grid;
+    grid-template-areas:
+      "header header header"
+      "nav nav nav"
+      "main main main"
+      "footer footer footer";
+  }
+  nav ul {
+    display: flex;
+  }
+}
+header {
+  grid-area: header;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 1rem 0;
+  text-align: center;
+  font-size: var(--header-font-size);
+}
+nav {
+  grid-area: nav;
+}
+nav ul {
+  list-style: none;
+
+  justify-content: center;
+  background-color: var(--secondary-color);
+  padding: 0.5rem;
+}
+
+nav ul li {
+  margin: 0 1rem;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+main {
+  padding: 2rem;
+  grid-area: main;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+p.red {
+  color: red;
+}
+
+footer {
+  grid-area: footer;
+  text-align: center;
+  padding: 1rem;
+  background-color: var(--primary-color);
+  color: white;
+}
+
+#one {
+  font-weight: bold;
+}
+
+div,
+p {
+  border: 1px solid #ccc;
+  padding: 0.5rem;
+}
+
+div p {
+  color: var(--secondary-color);
+}
+
+div > p {
+  font-style: italic;
+}
+
+div + p {
+  font-size: 1.2rem;
+}
+
+p:first-child {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+p:last-child {
+  text-decoration: underline;
+}
+
+a:active {
+  color: var(--secondary-color);
+}
+
+a:hover {
+  color: var(--primary-color);
+}
+
+a:visited {
+  color: gray;
+}
+
+.bergLandschaft {
+  background-size: cover;
+  height: 300px;
+  width: 100%;
+  object-fit: cover;
+  overflow: hidden;
+}
