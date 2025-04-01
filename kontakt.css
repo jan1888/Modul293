@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Winky+Sans&display=swap");
+
+:root {
+  --primary-color: #404e4d;
+  --secondary-color: #648767;
+  --font-color: #333;
+  --background-color: #ccdad1;
+  --header-font-size: 2rem;
+}
+
+form {
+  border: 5px solid var(--primary-color);
+  border-radius: 25px;
+  background-color: var(--background-color);
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+@media (min-width: 1001px) {
+  form {
+    grid: auto / auto auto;
+    grid-template-columns: repeat(auto-fit, minmax(40%, 1fr));
+    padding: 20px 50px 20px 50px;
+    grid-gap: 50px;
+    column-gap: 80px;
+  }
+}
+@media (max-width: 1000px) {
+  form {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 20px;
+    grid-gap: 20px;
+    column-gap: 0;
+  }
+}
+.form-group {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-items: space-between;
+}
+.form-group label {
+  color: var(--font-color);
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.form-group button,
+.form-group.multiple-choice select,
+.form-group input,
+.form-group textarea {
+  background: transparent;
+  outline: none;
+  font-size: 24px;
+  padding: 10px 0 10px 20px;
+  border: 5px solid var(--primary-color);
+  box-shadow: 5px 5px 0 var(--primary-color);
+  color: var(--font-color);
+  border-radius: 25px;
+  font-weight: lighter;
+  font-family: "Winky Sans", sans-serif;
+  caret-color: var(--font-color);
+  resize: none;
+}
+.form-group input:focus,
+.form-group textarea:focus {
+  border: 5px solid var(--secondary-color);
+  transition: all 0.5s;
+}
+
+.form-group button:hover {
+  background-color: var(--secondary-color);
+  transition: all 0.5s;
+}
+.form-group.multiple-choice select {
+  background-color: var(--background-color);
+}

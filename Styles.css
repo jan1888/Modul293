@@ -1,3 +1,5 @@
+@import "kontakt.css";
+
 /* CSS-Variablen */
 :root {
   --primary-color: #404e4d;
@@ -11,8 +13,14 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
 }
-@media (min-width: 801px) {
+
+*::-webkit-scrollbar {
+  display: none; /* Chrome, Safari and Opera */
+}
+@media (min-width: 1001px) {
   body {
     font-family: Arial, sans-serif;
     color: var(--font-color);
@@ -29,7 +37,7 @@
     height: 100%;
   }
 }
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
   body {
     font-family: Arial, sans-serif;
     color: var(--font-color);
