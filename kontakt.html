@@ -12,7 +12,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script>
       (function () {
-        emailjs.init("YOUR_PUBLIC_KEY"); // Ersetze "YOUR_PUBLIC_KEY" mit deinem EmailJS Public Key
+        emailjs.init("Q-J4dQQYl1I9-Slmr"); // Ersetze "YOUR_PUBLIC_KEY" mit deinem EmailJS Public Key
       })();
     </script>
     <script src="API.js" defer></script>
@@ -43,18 +43,19 @@
           <label for="message">Nachricht:</label>
           <textarea id="message" name="message" required></textarea>
         </div>
-        <div class="form-group">
+        <!--    <div class="form-group">
+
           <label for="password">Passwort:</label>
           <input type="password" id="password" name="password" required />
         </div>
-        <div class="form-group">
+             <div class="form-group">
           <label for="url">Webseite:</label>
           <input type="url" id="url" name="url" />
         </div>
         <div class="form-group">
           <label for="datetime">Datum</label>
           <input type="datetime-local" id="datetime" name="datetime" required />
-        </div>
+        </div -->
         <div class="form-group multiple-choice">
           <label for="geschlecht">Geschlecht:</label>
           <select
@@ -62,13 +63,15 @@
             name="geschlecht"
             placeholder="Wählen Sie Ihr Geschlecht"
           >
-            <option value="Männlich">Männlich</option>
-            <option value="Weiblich">Weiblich</option>
-            <option value="Anderes">Anderes</option>
+            <option value="Herr">Männlich</option>
+            <option value="Frau">Weiblich</option>
+            <option value="">Anderes</option>
           </select>
         </div>
         <div class="form-group">
-          <button type="submit">Absenden</button>
+          <button type="submit" onclick="sendMail()">Absenden</button>
+        </div>
+        <div class="form-group">
           <button type="reset">Eingaben löschen</button>
         </div>
       </form>

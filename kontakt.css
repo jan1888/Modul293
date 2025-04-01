@@ -51,6 +51,7 @@ form {
 .form-group input,
 .form-group textarea {
   background: transparent;
+  background-color: var(--background-color);
   outline: none;
   font-size: 24px;
   padding: 10px 0 10px 20px;
